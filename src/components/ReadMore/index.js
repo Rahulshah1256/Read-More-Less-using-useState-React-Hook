@@ -1,5 +1,13 @@
 // Write your code here
 import {useState} from 'react'
+import {
+  MainContainer,
+  Title,
+  SubTitle,
+  Image,
+  Description,
+  Button,
+} from './styledComponents'
 
 const ReadMore = props => {
   const {reactHooksDescription} = props
@@ -15,16 +23,16 @@ const ReadMore = props => {
     : reactHooksDescription.slice(0)
 
   return (
-    <div>
-      <h1> React Hooks</h1>
-      <p>Hooks are a new addition to React</p>
-      <img
+    <MainContainer>
+      <Title> React Hooks</Title>
+      <SubTitle>Hooks are a new addition to React</SubTitle>
+      <Image
         src="https://assets.ccbp.in/frontend/hooks/react-hooks-img.png"
         alt="react hooks"
       />
-      <p>{text}</p>
-      <button onClick={onChangeRead}>{readMoreHandle}</button>
-    </div>
+      <Description>{text}</Description>
+      <Button onClick={onChangeRead}>{readMoreHandle}</Button>
+    </MainContainer>
   )
 }
 
